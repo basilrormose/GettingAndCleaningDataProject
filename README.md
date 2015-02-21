@@ -67,7 +67,7 @@ Takes one parameter: the subfolder that contains the specific dataset based on t
 
 The function enables code resuse.
 
-> importdata <- function(dataset) {
+> `importdata <- function(dataset) {
 >     x <- data.table(read.table(paste("./", dataset, "/X_", dataset, ".txt", sep = "")))
 >     setnames(x, colnames(x), feature_names[, feature_name])
 > 
@@ -79,7 +79,7 @@ The function enables code resuse.
 > 
 >     y_x <- cbind(y, x)
 >     cbind(subject, y_x)
-> }
+> }`
 
 ### Import the training and test datasets
 
