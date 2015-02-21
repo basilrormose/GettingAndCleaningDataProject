@@ -1,60 +1,55 @@
-The dataset includes the following files:
-=========================================
+## The dataset includes the following files:
 
-- README.md  - this file which contains the description of the 
-- 'features_info.txt': Shows information about the variables used on the feature vector.
+- README.md: this file which contains the description of the run_analysis.R script
+- CodeBook.md: this is the data dictionary for the summary_data.txt dataset produced by the script
 
+The source data files used as input to the analysis script
+- features_info.txt: Shows information about the variables used on the feature vector.
 - 'features.txt': List of all features.
-
 - 'activity_labels.txt': Links the class labels with their activity name.
-
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 - 'train/X_train.txt': Training set.
-
 - 'train/y_train.txt': Training labels.
-
 - 'test/X_test.txt': Test set.
-
 - 'test/y_test.txt': Test labels.
 
-The following files are available for the train and test data. Their descriptions are equivalent. 
-
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+The following files are also available for the train and test data but are not used by the analysis script. Their descriptions are equivalent. 
 
 - 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
-
 - 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
-
 - 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
 
 
-# The run_analysis R script does the following.
-# 1. Merges the training and the test sets to create one data set.
-# 2. Extracts only the measurements on the mean and standard deviation for each measurement.
-# 3. Uses descriptive activity names to name the activities in the data set
-# 4. Appropriately labels the data set with descriptive variable names.
-# 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+## The run_analysis.R script
+The run_analysis R script does the following.
+1. Merges the training and the test sets to create one data set.
+2. Extracts only the measurements on the mean and standard deviation for each measurement.
+3. Uses descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names.
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-# Style guide used:
-# Hadley Wickam's R Style guide
-# http://adv-r.had.co.nz/Style.html
-#
-library(data.table)
-library(stringr)
-library(dplyr)
-library(tidyr)
+### Coding style guide used:
+Hadley Wickam's R Style guide
+http://adv-r.had.co.nz/Style.html
 
-# Import the activity labels from the current directory
-#
-activity_labels <- fread("./activity_labels.txt", stringsAsFactors = FALSE)
-setnames(activity_labels, c("V1", "V2"), c("value", "label"))
+### Libraries used
+> data.table
+> stringr
+> dplyr
+> tidyr
 
-# Import and clean the feature names by:
-#   removing non alpha-numeric characters
-#   replacing '-' with '_'
-#   converting names to lowercase
-#
-# Piping '%>%' used to simplify code
-#
+### Import the activity labels from the current directory
+
+> activity_labels <- fread("./activity_labels.txt", stringsAsFactors = FALSE)
+> setnames(activity_labels, c("V1", "V2"), c("value", "label"))
+
+### Import and clean the feature names by
+- Removing non alpha-numeric characters
+- Replacing '-' with '_'
+- converting names to lowercase
+
+Piping '%>%' used to simplify code
+
 feature_names <- fread("./features.txt", stringsAsFactors = FALSE)
 feature_names <- (
     feature_names %>%
