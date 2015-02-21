@@ -71,12 +71,14 @@ Feature naming is retained (and hence the above definitions apply) with the exce
 
 `activity`:
 	Factor with 6 levels defining the activity the subject engaged in 
+    ```
 		1 WALKING
 		2 WALKING_UPSTAIRS
 		3 WALKING_DOWNSTAIRS
 		4 SITTING
 		5 STANDING
 		6 LAYING
+    ```
     
 `tbodyacc_mean_x`: 
     Numeric  0.279 0.261 0.222 0.277 0.289 ...
@@ -237,7 +239,7 @@ Feature naming is retained (and hence the above definitions apply) with the exce
 `anglezgravitymean`: 
     Numeric  0.0123 -0.218 -0.3524 0.0689 0.065 ...
     
-``tbodyacc_std_x`: 
+`tbodyacc_std_x`: 
     Numeric  -0.996 -0.977 -0.928 -0.284 0.03 ...
     
 `tbodyacc_std_y`: 
@@ -246,13 +248,13 @@ Feature naming is retained (and hence the above definitions apply) with the exce
 `tbodyacc_std_z`: 
     Numeric  -0.98 -0.94 -0.826 -0.26 -0.23 ...
 	
-``tgravityacc_std_x`: 
+`tgravityacc_std_x`: 
     Numeric  -0.994 -0.968 -0.897 -0.977 -0.951 ...
 	
-``tgravityacc_std_y`: 	
+`tgravityacc_std_y`: 	
     Numeric  -0.981 -0.936 -0.908 -0.971 -0.937 ...
 	
-``tgravityacc_std_z`: 
+`tgravityacc_std_z`: 
     Numeric  -0.976 -0.949 -0.852 -0.948 -0.896 ...
 	
 `tbodyaccjerk_std_x`: 
@@ -279,7 +281,7 @@ Feature naming is retained (and hence the above definitions apply) with the exce
 `tbodygyrojerk_std_y`: 
     Numeric  -0.995 -0.99 -0.968 -0.304 -0.239 ...
 	
-`tbodygyrojerk_std_z`: 	
+`tbodygyrojerk_std_z`: 
     Numeric  -0.992 -0.988 -0.958 -0.404 -0.269 ...
 	
 `tbodyaccmag_std`: 
