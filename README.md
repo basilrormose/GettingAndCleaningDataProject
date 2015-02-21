@@ -50,10 +50,11 @@ The run_analysis R script does the following.
 
 Piping '%>%' used to simplify code
 
+```
 > feature_names <- fread("./features.txt", stringsAsFactors = FALSE)
 > feature_names <- (
 >    feature_names %>%
->         select(feature_name = V2) %>%
+>        select(feature_name = V2) %>%
 >        mutate(feature_name = str_replace_all(feature_name, "\\,", "")) %>%
 >        mutate(feature_name = str_replace_all(feature_name, "\\-", "_")) %>%
 >        mutate(feature_name = str_replace_all(feature_name, "\\(\\)", "")) %>%
@@ -61,13 +62,14 @@ Piping '%>%' used to simplify code
 >        mutate(feature_name = str_replace_all(feature_name, "\\)", "")) %>%
 >        mutate(feature_name = tolower(feature_name))
 >)
+```
 
 ### Function to import the training or test datasets 
 Takes one parameter: the subfolder that contains the specific dataset based on the subfolder of the curent directory and file naming scheme. It imports the core datsets and combines them with the subject and activity variables with the rest of the measurements. Apply the cleaned variable names to the datasets.
 
 The function enables code resuse.
 
-> `importdata <- function(dataset) {`
+> importdata <- function(dataset) {
 >     x <- data.table(read.table(paste("./", dataset, "/X_", dataset, ".txt", sep = "")))
 >     setnames(x, colnames(x), feature_names[, feature_name])
 > 
@@ -79,7 +81,7 @@ The function enables code resuse.
 > 
 >     y_x <- cbind(y, x)
 >     cbind(subject, y_x)
-> `}`
+> }
 
 ### Import the training and test datasets
 
