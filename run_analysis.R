@@ -40,7 +40,8 @@ feature_names <- (
 
 # Function to import the training or test datasets based on the subfolder
 # of the curent directory and file naming scheme, and combine
-# the subject and activity variables with the rest of the measurements
+# the subject and activity variables with the rest of the measurements,
+# Apply the cleaned variable names to the datasets.
 #
 # The function enables code resuse.
 #
