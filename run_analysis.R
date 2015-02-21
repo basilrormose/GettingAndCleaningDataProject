@@ -83,4 +83,4 @@ summary_data <- all_data[, lapply(.SD, mean, na.rm = TRUE), by = list(activity, 
 
 # Ourput the summary dataset for uploading
 #
-write.table(summary_data, file = "summary_data.txt", append = FALSE, sep = "\t")
+write.table(summary_data, file = "summary_data.txt", append = FALSE, sep = "\t", row.names = FALSE)
