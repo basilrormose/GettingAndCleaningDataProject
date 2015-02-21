@@ -22,15 +22,14 @@ The following files are also available for the train and test data but are not u
 
 ## The run_analysis.R script
 The run_analysis R script does the following.
-1. Merges the training and the test sets to create one data set.
-2. Extracts only the measurements on the mean and standard deviation for each measurement.
-3. Uses descriptive activity names to name the activities in the data set
-4. Appropriately labels the data set with descriptive variable names.
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+-1. Merges the training and the test sets to create one data set.
+-2. Extracts only the measurements on the mean and standard deviation for each measurement.
+-3. Uses descriptive activity names to name the activities in the data set
+-4. Appropriately labels the data set with descriptive variable names.
+-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ### Coding style guide used:
-Hadley Wickam's R Style guide
-http://adv-r.had.co.nz/Style.html
+[Hadley Wickam's R Style guide](http://adv-r.had.co.nz/Style.html)
 
 ### Libraries used
 > data.table
@@ -50,17 +49,17 @@ http://adv-r.had.co.nz/Style.html
 
 Piping '%>%' used to simplify code
 
-feature_names <- fread("./features.txt", stringsAsFactors = FALSE)
-feature_names <- (
-    feature_names %>%
-        select(feature_name = V2) %>%
-        mutate(feature_name = str_replace_all(feature_name, "\\,", "")) %>%
-        mutate(feature_name = str_replace_all(feature_name, "\\-", "_")) %>%
-        mutate(feature_name = str_replace_all(feature_name, "\\(\\)", "")) %>%
-        mutate(feature_name = str_replace_all(feature_name, "\\(", "")) %>%
-        mutate(feature_name = str_replace_all(feature_name, "\\)", "")) %>%
-        mutate(feature_name = tolower(feature_name))
-)
+> feature_names <- fread("./features.txt", stringsAsFactors = FALSE)
+> feature_names <- (
+>    feature_names %>%
+>         select(feature_name = V2) %>%
+>        mutate(feature_name = str_replace_all(feature_name, "\\,", "")) %>%
+>        mutate(feature_name = str_replace_all(feature_name, "\\-", "_")) %>%
+>        mutate(feature_name = str_replace_all(feature_name, "\\(\\)", "")) %>%
+>        mutate(feature_name = str_replace_all(feature_name, "\\(", "")) %>%
+>        mutate(feature_name = str_replace_all(feature_name, "\\)", "")) %>%
+>        mutate(feature_name = tolower(feature_name))
+>)
 
 # Function to import the training or test datasets based on the subfolder
 # of the curent directory and file naming scheme, and combine
