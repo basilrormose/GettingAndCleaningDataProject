@@ -68,7 +68,7 @@ feature_names <- (
 ```
 
 ### Function to import the training or test datasets 
-Takes one parameter: the subfolder that contains the specific dataset based on the subfolder of the curent directory and file naming scheme. It imports the core datsets and combines them with the subject and activity variables with the rest of the measurements. Apply the cleaned variable names to the datasets.
+Takes one parameter: the subfolder that contains the specific dataset based on the subfolder of the curent directory and file naming scheme. It imports the core datsets and combines them and the subject and activity variables. Apply the cleaned variable names to the datasets.
 
 The function enables code resuse.
 
