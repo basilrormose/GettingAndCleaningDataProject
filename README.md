@@ -1,19 +1,19 @@
 ## The dataset includes the following files:
 
-- README.md: this file which contains the description of the run_analysis.R script
-- CodeBook.md: this is the data dictionary for the summary_data.txt dataset produced by the script
-- run_analysis.R: the script that peroms the data cleaning and summarizarion
+- `README.md`: this file which contains the description of the run_analysis.R script
+- `CodeBook.md`: this is the data dictionary for the summary_data.txt dataset produced by the script
+- `run_analysis.R`: the script that peroms the data cleaning and summarizarion
 
 The source data files used as input to the analysis script
-- features_info.txt: Shows information about the variables used on the feature vector.
-- features.txt: List of all features.
-- activity_labels.txt: Links the class labels with their activity name.
-- train/subject_train.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-- test/subject_test.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-- train/X_train.txt: Training set.
-- train/y_train.txt: Training labels.
-- test/X_test.txt: Test set.
-- test/y_test.txt: Test labels.
+- `features_info.txt`: Shows information about the variables used on the feature vector.
+- `features.txt`: List of all features.
+- `activity_labels.txt`: Links the class labels with their activity name.
+- `train/subject_train.txt`: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- `test/subject_test.txt`: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+- `train/X_train.txt`: Training set.
+- `train/y_train.txt`: Training labels.
+- `test/X_test.txt`: Test set.
+- `test/y_test.txt`: Test labels.
 
 The following files are also available for the train and test data but are not used by the analysis script. Their descriptions are equivalent. 
 
