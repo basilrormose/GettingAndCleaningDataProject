@@ -71,12 +71,12 @@ Feature naming is retained (and hence the above definitions apply) with the exce
 
 `activity`:
 	Factor with 6 levels defining the activity the subject engaged in 
-        1 WALKING
-        2 WALKING_UPSTAIRS
-        3 WALKING_DOWNSTAIRS
-        4 SITTING
-        5 STANDING  
-        6 LAYING
+>        1 WALKING
+>        2 WALKING_UPSTAIRS
+>        3 WALKING_DOWNSTAIRS
+>        4 SITTING
+>        5 STANDING  
+>        6 LAYING
     
 `tbodyacc_mean_x`: 
     Numeric  0.279 0.261 0.222 0.277 0.289 ...
