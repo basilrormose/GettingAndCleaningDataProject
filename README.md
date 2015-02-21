@@ -95,7 +95,7 @@ subject_y_x_train <- importdata("train")
 subject_y_x_test <- importdata("test")
 ```
 
-### Combine tjhe datasets 
+### Combine the datasets 
 Combine the full training and test datasets and change the activity variable from integer to a factor with the appropriate activity label.
 
 ```
